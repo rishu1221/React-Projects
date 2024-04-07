@@ -1,0 +1,36 @@
+.FormBox{
+    margin-top : 30px
+    
+}
+
+.section_Page{
+    padding : 50px;
+    border : 1px solid white;
+    border-radius : 15px;
+    color: #E5E5E5;
+    height: 100vh;
+}
+
+.inputForm{
+    background-color: #000000;
+}
+.todoList{
+    background-color: #14213D;
+}
+.filterList{
+    background-color: #FCA311;
+}
+
+.inputForm input{
+    border : none;
+    border-radius : 5px;
+    padding : 10px;
+    outline: none;
+}
+
+.inputForm button{
+    padding : 10px;
+    margin: 5px;
+    border-radius : 5px;
+    background-color: E5E5E5;
+}
