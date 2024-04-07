@@ -15,7 +15,7 @@ export default function Buttons({title,description,filterText}){
 
     const filterTodoList = ()=>{
         const filteredList = todoList.filter((element)=>{
-            return element.title.includes(filterText) ? element : null;
+            return element.title.includes(filterText) || element.description.includes(filterText);
         })
         setFilterList(filteredList);
     }
