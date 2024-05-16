@@ -1,5 +1,6 @@
 import { useRecoilValue,useRecoilState } from "recoil"
 import { TodoList,FilterList } from "../stores/atoms/TodoList";
+import { useMemo,useCallback } from "react";
 
 export default function Buttons({title,description,filterText}){
 
@@ -13,12 +14,12 @@ export default function Buttons({title,description,filterText}){
         setTodoList((todoList) =>  [...todoList,tempList]);
     }
 
-    const filterTodoList = ()=>{
+    const filterTodoList = useCallback(()=>{
         const filteredList = todoList.filter((element)=>{
             return element.title.includes(filterText) || element.description.includes(filterText);
         })
         setFilterList(filteredList);
-    }
+    },[filterText])
 
 
     return (
