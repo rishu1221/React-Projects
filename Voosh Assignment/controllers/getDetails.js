@@ -2,7 +2,6 @@ const {userDetails} = require("../db/connect")
 
 const getDetails = async (req,res)=>{
     try {
-
         const id = req.user.id;
         const exisitingInfo = await userDetails.findOne({id:id});
         console.log(exisitingInfo);
